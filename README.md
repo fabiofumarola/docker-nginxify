@@ -1,15 +1,10 @@
-# NGINX with Proxy Generator
+# Docker Nginxify
+This project enables automation for NGINX management with Docker. It:
 
-It allows us to start :
-
-1. a Nginx instance
-2. generate proxy configurations
-3. generate basic auth
-
-The application can be managed via:
-1. `manage.sh`
-2. or manually as explained below
-
+1. parses JSON configurations and create conf files
+2. creates a NGINX instance with mounted folders
+3. generates basic authentication file
+4. exposes basic admin via the `manage.sh` file
 
 ## Manage via `manage.sh`
 
@@ -18,27 +13,15 @@ usage manage.sh [clean_conf | gen_default | gen_all | start | restart | reload |
 ```
 options:
 
-1. clean_conf: remove all the configuration from `nginx/conf.d/`
-2. gen_default: generate only the `default.conf` file
-3. gen_all: generate all the configurations files from the `nginx_conf.json` file
-4. start: start the docker container of nginx
-5. restart: restart the docker container
-6. reload: reload the configuration in `nginx/conf.d/`
-7. stop: stop the container and clean the current folder
+1. clean_conf: removes all the configuration from `nginx/conf.d/`
+2. gen_default: generates only the `default.conf` file
+3. gen_all: generates all the configurations files from the `nginx_conf.json` file
+4. start: starts the docker container of nginx
+5. restart: restarts the docker container
+6. reload: reloads the configuration in `nginx/conf.d/`
+7. stop: stops the container and clean the current folder
 
 ## Manual Configurations
-
-### Reload NGINX confs
-
-```bash
-docker exec -it <container_name> /usr/sbin/nginx -t  
-```
-
-### Start NGINX
-
-```bash
-docker-compose up -d
-```
 
 ### Generate Proxy configurations
 
