@@ -131,3 +131,4 @@ As default there is a custom_404 custom_50x and index page in the folder `./ngin
 - [x] To generate basic authentications
 - [ ] To generate json file from docker inspection
 - [ ] To generate json file from weave inspection
+- [ ] To implement web admin gui
