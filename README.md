@@ -123,3 +123,11 @@ optional arguments:
 ### Index 404 and 50x pages
 
 As default there is a custom_404 custom_50x and index page in the folder `./nginx/www/html`. If you need you can change these pages.
+
+## TODO
+
+- [x] To generate NGINX conf via json configuration file
+- [x] To start an NGINX instance via dockr-compose
+- [x] To generate basic authentications
+- [ ] To generate json file from docker inspection
+- [ ] To generate json file from weave inspection
