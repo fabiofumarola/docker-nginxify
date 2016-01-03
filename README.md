@@ -1,5 +1,5 @@
 # Docker Nginxify
-This project enables automation for NGINX management with Docker. It:
+This project enables automation in exposing Docker containers via NGINX. In particular, it:
 
 1. parses JSON configurations and create conf files
 2. creates a NGINX instance with mounted folders
