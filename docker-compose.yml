@@ -1,0 +1,10 @@
+nginx:
+  build: .
+  ports:
+   - "80:80"
+   - "443:443"
+  volumes:
+   - ./nginx/conf.d:/etc/nginx/conf.d
+   - ./nginx/sites-enabled:/etc/nginx/sites-enabled
+   - ./nginx/htpasswd:/etc/nginx/htpasswd
+   - ./nginx/www/html:/usr/share/nginx/html

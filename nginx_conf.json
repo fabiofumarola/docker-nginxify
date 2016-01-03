@@ -1,0 +1,39 @@
+{
+  "proxies": [
+    {
+      "name": "spark",
+      "servers": [
+        "spark.datatoknowledge.it"
+      ],
+      "dockers": [
+        "spark-master-0:8080"
+      ],
+      "secured": true
+    },
+    {
+      "name": "es",
+      "servers": [
+        "es.datatoknowledge.it"
+      ],
+      "dockers": [
+        "es-data-0:9200",
+        "es-data-1:9200",
+        "es-data-1:9200"
+      ],
+      "docker_name": "es-data-0",
+      "docker_port": "9200",
+      "secured": true
+    },
+    {
+      "name": "datatoknowledge",
+      "servers": [
+        "datatoknowledge.it",
+        "www.datatoknowledge.it"
+      ],
+      "dockers": [
+        "dtk-0:5000"
+      ],
+      "secured": false
+    }
+  ]
+}
