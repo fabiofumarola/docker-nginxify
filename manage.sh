@@ -19,7 +19,7 @@ case $1 in
     ;;
   reload)
     name=`docker-compose ps -q`
-    docker exec -it ${name} /usr/sbin/nginx -t
+    docker exec -it ${name} /usr/sbin/nginx -s reload
     ;;
   stop)
     docker-compose stop
