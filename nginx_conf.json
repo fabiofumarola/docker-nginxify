@@ -18,10 +18,8 @@
       "dockers": [
         "es-data-0:9200",
         "es-data-1:9200",
-        "es-data-1:9200"
+        "es-data-2:9200"
       ],
-      "docker_name": "es-data-0",
-      "docker_port": "9200",
       "secured": true
     },
     {
@@ -31,7 +29,7 @@
         "www.datatoknowledge.it"
       ],
       "dockers": [
-        "dtk-0:5000"
+        "dtk-0:80"
       ],
       "secured": false
     }
