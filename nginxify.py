@@ -102,8 +102,7 @@ def generate_configurations(json_data, dest_folder, overwrite):
 def generate_default(dest_folder):
     default_template =  """server {
         listen 80 default_server;
-        listen [::]:80 default_server ipv6only=on;
-
+        server_name _; # This is just an invalid value which will never trigger on a real hostname.
 
         error_page 404 /custom_404.html;
         location = /custom_404.html {
@@ -111,11 +110,11 @@ def generate_default(dest_folder):
                 internal;
         }
 
-				error_page 500 502 503 504 /custom_50x.html;
-				location = /custom_50x.html {
-								root /usr/share/nginx/html;
-								internal;
-				}
+		error_page 500 502 503 504 /custom_50x.html;
+		location = /custom_50x.html {
+						root /usr/share/nginx/html;
+						internal;
+		}
 }
     """
 
