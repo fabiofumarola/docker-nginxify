@@ -28,7 +28,7 @@ if not os.path.exists(args.dest_folder):
 
 
 
-crypted_pwd = crypt.crypt(args.pwd)
+crypted_pwd = crypt.crypt(args.pwd,'')
 dest_file = args.dest_folder + "secure"
 with open(dest_file, 'a') as f:
     f.write("%s:%s\n" % (args.user, crypted_pwd))
