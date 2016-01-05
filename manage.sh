@@ -15,7 +15,6 @@ case $1 in
     docker-compose up -d
     ;;
   restart)
-    ./nginxify.py --default True
     docker-compose restart
     ;;
   reload)
